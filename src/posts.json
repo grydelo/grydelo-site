@@ -1,24 +1,328 @@
 {
   "//": "Portfolio carousels for \"The feed\". Slides live in public/posts/<slug>/1.webp..N.webp with a 640x800 cover.webp. Concept work for fictional brokers: never include real client names, handles or logos.",
   "carousels": [
-    { "slug": "company-news", "category": "Company news", "title": "cTrader is now live", "slides": 3 },
-    { "slug": "cn-new-office", "category": "Company news", "title": "We're opening in Dubai", "slides": 3 },
-    { "slug": "cn-app-update", "category": "Company news", "title": "Our app, rebuilt", "slides": 3 },
-    { "slug": "cn-milestone", "category": "Company news", "title": "100,000 traders. Thank you.", "slides": 3 },
-    { "slug": "cn-holiday-hours", "category": "Company news", "title": "Holiday trading hours", "slides": 3 },
-    { "slug": "industry-news", "category": "Industry news", "title": "Finfluencers face stricter rules", "slides": 3 },
-    { "slug": "in-central-banks", "category": "Industry news", "title": "Central bank week", "slides": 3 },
-    { "slug": "in-gold-drivers", "category": "Industry news", "title": "Why gold keeps making headlines", "slides": 3 },
-    { "slug": "in-clock-change", "category": "Industry news", "title": "The clocks are changing", "slides": 3 },
-    { "slug": "in-cpi-explainer", "category": "Industry news", "title": "CPI in 60 seconds", "slides": 3 },
-    { "slug": "promotion", "category": "Promotion", "title": "0 commission on gold", "slides": 3 },
-    { "slug": "pr-refer-friend", "category": "Promotion", "title": "Trade together: refer a friend", "slides": 3 },
-    { "slug": "pr-demo-challenge", "category": "Promotion", "title": "The Demo Challenge", "slides": 3 },
-    { "slug": "pr-index-spreads", "category": "Promotion", "title": "Tighter spreads on US indices", "slides": 3 },
-    { "slug": "pr-swap-free", "category": "Promotion", "title": "Swap-free accounts", "slides": 3 }
+    {
+      "slug": "company-news",
+      "category": "Company news",
+      "title": "cTrader is now live",
+      "slides": 3
+    },
+    {
+      "slug": "cn-new-office",
+      "category": "Company news",
+      "title": "We're opening in Dubai",
+      "slides": 3
+    },
+    {
+      "slug": "cn-app-update",
+      "category": "Company news",
+      "title": "Our app, rebuilt",
+      "slides": 3
+    },
+    {
+      "slug": "cn-milestone",
+      "category": "Company news",
+      "title": "100,000 traders. Thank you.",
+      "slides": 3
+    },
+    {
+      "slug": "cn-holiday-hours",
+      "category": "Company news",
+      "title": "Holiday trading hours",
+      "slides": 3
+    },
+    {
+      "slug": "cn-copy-trading",
+      "category": "Company news",
+      "title": "Copy trading is here",
+      "slides": 3
+    },
+    {
+      "slug": "cn-mt5-live",
+      "category": "Company news",
+      "title": "MT5 is live",
+      "slides": 3
+    },
+    {
+      "slug": "cn-new-licence",
+      "category": "Company news",
+      "title": "A new licence",
+      "slides": 3
+    },
+    {
+      "slug": "cn-support-247",
+      "category": "Company news",
+      "title": "Support, now 24/7",
+      "slides": 3
+    },
+    {
+      "slug": "cn-new-shares",
+      "category": "Company news",
+      "title": "50 new share CFDs",
+      "slides": 3
+    },
+    {
+      "slug": "cn-webinar",
+      "category": "Company news",
+      "title": "Live webinar: the London open",
+      "slides": 3
+    },
+    {
+      "slug": "cn-partners",
+      "category": "Company news",
+      "title": "Partner with us",
+      "slides": 3
+    },
+    {
+      "slug": "cn-payments",
+      "category": "Company news",
+      "title": "Deposit your way",
+      "slides": 3
+    },
+    {
+      "slug": "cn-security",
+      "category": "Company news",
+      "title": "Lock down your account",
+      "slides": 3
+    },
+    {
+      "slug": "cn-behind-desk",
+      "category": "Company news",
+      "title": "Behind the desk",
+      "slides": 3
+    },
+    {
+      "slug": "industry-news",
+      "category": "Industry news",
+      "title": "Finfluencers face stricter rules",
+      "slides": 3
+    },
+    {
+      "slug": "in-central-banks",
+      "category": "Industry news",
+      "title": "Central bank week",
+      "slides": 3
+    },
+    {
+      "slug": "in-gold-drivers",
+      "category": "Industry news",
+      "title": "Why gold keeps making headlines",
+      "slides": 3
+    },
+    {
+      "slug": "in-clock-change",
+      "category": "Industry news",
+      "title": "The clocks are changing",
+      "slides": 3
+    },
+    {
+      "slug": "in-cpi-explainer",
+      "category": "Industry news",
+      "title": "CPI in 60 seconds",
+      "slides": 3
+    },
+    {
+      "slug": "in-nfp",
+      "category": "Industry news",
+      "title": "NFP, explained",
+      "slides": 3
+    },
+    {
+      "slug": "in-opec",
+      "category": "Industry news",
+      "title": "Why oil reacts to OPEC+",
+      "slides": 3
+    },
+    {
+      "slug": "in-intervention",
+      "category": "Industry news",
+      "title": "Currency intervention",
+      "slides": 3
+    },
+    {
+      "slug": "in-rate-cuts",
+      "category": "Industry news",
+      "title": "Rate cuts, explained",
+      "slides": 3
+    },
+    {
+      "slug": "in-weekend-gaps",
+      "category": "Industry news",
+      "title": "Why markets gap on Monday",
+      "slides": 3
+    },
+    {
+      "slug": "in-leverage",
+      "category": "Industry news",
+      "title": "Why leverage limits differ",
+      "slides": 3
+    },
+    {
+      "slug": "in-crypto-247",
+      "category": "Industry news",
+      "title": "Crypto never sleeps",
+      "slides": 3
+    },
+    {
+      "slug": "in-pmi",
+      "category": "Industry news",
+      "title": "PMI in 60 seconds",
+      "slides": 3
+    },
+    {
+      "slug": "in-sessions",
+      "category": "Industry news",
+      "title": "Three sessions, one market",
+      "slides": 3
+    },
+    {
+      "slug": "in-scam-alert",
+      "category": "Industry news",
+      "title": "Spot the scam",
+      "slides": 3
+    },
+    {
+      "slug": "promotion",
+      "category": "Promotion",
+      "title": "0 commission on gold",
+      "slides": 3
+    },
+    {
+      "slug": "pr-refer-friend",
+      "category": "Promotion",
+      "title": "Trade together: refer a friend",
+      "slides": 3
+    },
+    {
+      "slug": "pr-demo-challenge",
+      "category": "Promotion",
+      "title": "The Demo Challenge",
+      "slides": 3
+    },
+    {
+      "slug": "pr-index-spreads",
+      "category": "Promotion",
+      "title": "Tighter spreads on US indices",
+      "slides": 3
+    },
+    {
+      "slug": "pr-swap-free",
+      "category": "Promotion",
+      "title": "Swap-free accounts",
+      "slides": 3
+    },
+    {
+      "slug": "pr-cashback",
+      "category": "Promotion",
+      "title": "Cashback on every lot",
+      "slides": 3
+    },
+    {
+      "slug": "pr-zero-fees",
+      "category": "Promotion",
+      "title": "Zero deposit fees",
+      "slides": 3
+    },
+    {
+      "slug": "pr-black-tier",
+      "category": "Promotion",
+      "title": "Meet Black",
+      "slides": 3
+    },
+    {
+      "slug": "pr-oil-spreads",
+      "category": "Promotion",
+      "title": "Oil, for less",
+      "slides": 3
+    },
+    {
+      "slug": "pr-academy",
+      "category": "Promotion",
+      "title": "Learn to trade. Free.",
+      "slides": 3
+    },
+    {
+      "slug": "pr-friday-quiz",
+      "category": "Promotion",
+      "title": "The Friday quiz",
+      "slides": 3
+    },
+    {
+      "slug": "pr-crypto-launch",
+      "category": "Promotion",
+      "title": "Crypto, 24/7",
+      "slides": 3
+    },
+    {
+      "slug": "pr-free-vps",
+      "category": "Promotion",
+      "title": "Free VPS for active traders",
+      "slides": 3
+    },
+    {
+      "slug": "pr-nbp",
+      "category": "Promotion",
+      "title": "Negative balance protection",
+      "slides": 3
+    },
+    {
+      "slug": "pr-black-friday",
+      "category": "Promotion",
+      "title": "Black Friday: 50% off commissions",
+      "slides": 3
+    }
   ],
   "rows": [
-    ["promotion", "industry-news", "company-news", "pr-demo-challenge", "in-gold-drivers", "cn-app-update", "pr-swap-free", "in-cpi-explainer"],
-    ["cn-milestone", "pr-refer-friend", "in-central-banks", "cn-new-office", "pr-index-spreads", "in-clock-change", "cn-holiday-hours"]
+    [
+      "company-news",
+      "industry-news",
+      "promotion",
+      "cn-new-office",
+      "in-central-banks",
+      "pr-refer-friend",
+      "cn-app-update",
+      "in-gold-drivers",
+      "pr-demo-challenge",
+      "cn-milestone",
+      "in-clock-change",
+      "pr-index-spreads",
+      "cn-holiday-hours",
+      "in-cpi-explainer",
+      "pr-swap-free"
+    ],
+    [
+      "in-nfp",
+      "pr-cashback",
+      "cn-mt5-live",
+      "in-opec",
+      "pr-zero-fees",
+      "cn-new-licence",
+      "in-intervention",
+      "pr-black-tier",
+      "cn-support-247",
+      "in-rate-cuts",
+      "pr-oil-spreads",
+      "cn-new-shares",
+      "in-weekend-gaps",
+      "pr-academy",
+      "cn-copy-trading"
+    ],
+    [
+      "pr-friday-quiz",
+      "cn-partners",
+      "in-crypto-247",
+      "pr-crypto-launch",
+      "cn-payments",
+      "in-pmi",
+      "pr-free-vps",
+      "cn-security",
+      "in-sessions",
+      "pr-nbp",
+      "cn-behind-desk",
+      "in-scam-alert",
+      "pr-black-friday",
+      "cn-webinar",
+      "in-leverage"
+    ]
   ]
 }

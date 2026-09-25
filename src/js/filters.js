@@ -14,3 +14,18 @@ export function initBlogFilters() {
     });
   });
 }
+
+// Feed: category chips hide non-matching carousel tiles across every row and restart each row at its start.
+export function initFeedFilters() {
+  const bar = document.querySelector('[data-feed-filters]');
+  if (!bar) return;
+  const tiles = [...document.querySelectorAll('.tile[data-category]')];
+  bar.addEventListener('click', (e) => {
+    const chip = e.target.closest('[data-filter]');
+    if (!chip) return;
+    bar.querySelectorAll('[data-filter]').forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
+    const f = chip.dataset.filter;
+    tiles.forEach((t) => { t.hidden = f !== '*' && t.dataset.category !== f; });
+    document.querySelectorAll('[data-track]').forEach((track) => track.dispatchEvent(new Event('feed:reset')));
+  });
+}

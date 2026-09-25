@@ -329,7 +329,8 @@ h1 .dim { color: var(--dim); }
 
 /* Feed */
 .feed { overflow: hidden; }
-.feed-row { margin-top: 56px; }
+.blog-filters.feed-filters { margin: 36px 0 0; }
+.feed-row { margin-top: 40px; }
 .feed-controls { display: flex; justify-content: flex-end; gap: 8px; }
 .arrow {
   width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line-4); background: transparent;

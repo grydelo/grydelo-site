@@ -19,6 +19,8 @@ export function initFeed() {
     el.addEventListener('touchstart', () => pause(4000), { passive: true });
     el.addEventListener('focusin', () => { d.hover = true; });
     el.addEventListener('focusout', () => { d.hover = false; });
+    // Filters reset rows to their start (see initFeedFilters).
+    el.addEventListener('feed:reset', () => { d.pos = 0; d.dir = 1; el.scrollLeft = 0; });
     return d;
   });
 

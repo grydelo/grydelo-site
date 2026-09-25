@@ -124,7 +124,7 @@ const carousels = Object.fromEntries(posts.carousels.map((c) => [c.slug, c]));
 const tile = (slug) => {
   const c = carousels[slug];
   return `
-        <button type="button" class="tile tile--tall" data-carousel="${c.slug}" data-slides="${c.slides}" data-caption="${esc(`${c.category} · ${c.title}`)}" aria-label="Open carousel: ${esc(c.title)}, ${c.slides} slides">
+        <button type="button" class="tile tile--tall" data-carousel="${c.slug}" data-category="${esc(c.category)}" data-slides="${c.slides}" data-caption="${esc(`${c.category} · ${c.title}`)}" aria-label="Open carousel: ${esc(c.title)}, ${c.slides} slides">
           <img src="/posts/${c.slug}/cover.webp" alt="" width="640" height="800" loading="lazy" decoding="async">
           ${SHOW_BADGES ? `<span class="tile-badge">${esc(c.category)}</span>` : ''}
           <span class="tile-count" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="3.5" width="9" height="11" rx="1.5"/><path d="M5.5 1.5h7a2 2 0 0 1 2 2v9"/></svg>${c.slides}</span>
@@ -150,6 +150,10 @@ const feed = () => `
 <section class="section rule feed" id="work">
   <div class="wrap">
     ${sectionHead('02 / The feed', 'Carousels built to clear compliance.', 'Concept work for fictional brokers: company news, industry news and promotions. A different brand every time, the same discipline underneath. Tap any post to flip through it.', 380)}
+    <div class="blog-filters feed-filters" role="group" aria-label="Filter posts by category" data-feed-filters>
+      <button type="button" class="filter-chip" aria-pressed="true" data-filter="*">All<span>${posts.carousels.length}</span></button>
+      ${map([...new Set(posts.carousels.map((c) => c.category))], (cat) => `<button type="button" class="filter-chip" aria-pressed="false" data-filter="${esc(cat)}">${esc(cat)}<span>${posts.carousels.filter((c) => c.category === cat).length}</span></button>`)}
+    </div>
   </div>
   ${map(posts.rows, (row, r) => `
   <div class="feed-row" data-row data-dir="${r % 2 ? -1 : 1}">

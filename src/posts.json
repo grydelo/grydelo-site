@@ -1,0 +1,129 @@
+{
+  "//": "Gallery rows for \"The feed\". Put post exports in public/posts/ and set src to e.g. \"/posts/01.jpg\". Tile size comes from width/height (4:5 or 1:1). Never include client names or handles.",
+  "rows": [
+    [
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1350,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1080,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1350,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1350,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1080,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1350,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1080,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1350,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1350,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1080,
+        "alt": ""
+      }
+    ],
+    [
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1080,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1350,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1350,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1080,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1350,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1080,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1350,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1350,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1080,
+        "alt": ""
+      },
+      {
+        "src": null,
+        "width": 1080,
+        "height": 1350,
+        "alt": ""
+      }
+    ]
+  ]
+}

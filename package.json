@@ -1,0 +1,17 @@
+{
+  "name": "grydelo-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vite build && wrangler deploy"
+  },
+  "devDependencies": {
+    "marked": "^18.0.14",
+    "vite": "^7.1.0",
+    "wrangler": "^4.0.0"
+  }
+}

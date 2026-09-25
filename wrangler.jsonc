@@ -1,0 +1,27 @@
+// Cloudflare Worker + static assets. `npm run deploy` builds with Vite, then `wrangler deploy`.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "grydelo",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-09-01",
+  "routes": [{ "pattern": "grydelo.com", "custom_domain": true }],
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    // Only the API runs the Worker; pages and files are served straight from the asset store.
+    "run_worker_first": ["/api/*"]
+  },
+  "vars": {
+    // Contact form. Workers can only deliver to a verified Email Routing destination, so briefs go to the inbox
+    // that hello@ forwards to (CONTACT_INBOX) while the message is still addressed to hello@ (CONTACT_TO).
+    // If hello@'s forwarding changes, update CONTACT_INBOX and the allowed address below to match.
+    "CONTACT_FROM": "forms@grydelo.com",
+    "CONTACT_TO": "hello@grydelo.com",
+    "CONTACT_INBOX": "grydelomail@gmail.com"
+  },
+  "send_email": [{ "name": "SEND_EMAIL", "allowed_destination_addresses": ["grydelomail@gmail.com"] }],
+  "ratelimits": [{ "name": "CONTACT_LIMIT", "namespace_id": "1001", "simple": { "limit": 5, "period": 60 } }],
+  "observability": { "enabled": true }
+}

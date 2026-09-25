@@ -9,6 +9,7 @@ import { initMotion } from './js/motion.js';
 import { initBlogFilters } from './js/filters.js';
 import { initContactForms } from './js/contact-form.js';
 import { initNextEvent } from './js/next-event.js';
+import { initLightbox } from './js/lightbox.js';
 
 initTheme();
 initSession();
@@ -20,6 +21,7 @@ initMotion();
 initBlogFilters();
 initContactForms();
 initNextEvent();
+initLightbox();
 
 // The calendar page loads its renderer on demand.
 const calendar = document.querySelector('[data-calendar]');

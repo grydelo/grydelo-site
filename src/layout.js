@@ -99,8 +99,8 @@ const footer = () => `
     </div>
   </div>
   <div class="wrap footer-disclaimer">
-    Grydelo is a marketing agency. We are not a broker and do not provide investment advice. Trading forex and CFDs on margin
-    carries a high level of risk and may not be suitable for all investors. Market data on this site is for information only.
+    <p>Grydelo is a marketing agency. We are not a broker and do not provide investment advice. Trading forex and CFDs on margin
+    carries a high level of risk and may not be suitable for all investors. Market data on this site is for information only.</p>
   </div>
   <div class="wrap footer-inner">
     <span>© ${new Date().getFullYear()} Grydelo · Social media agency for forex brokers</span>

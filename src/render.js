@@ -119,20 +119,37 @@ const servicesSection = () => `
   </div>
 </section>`;
 
-const tile = (p, i) => {
-  const tall = p.height >= p.width * 1.2;
-  const ratio = tall ? '4:5' : '1:1';
+const carousels = Object.fromEntries(posts.carousels.map((c) => [c.slug, c]));
+
+const tile = (slug) => {
+  const c = carousels[slug];
   return `
-        <div class="tile ${tall ? 'tile--tall' : 'tile--square'} striped">
-          ${media(p, `Post · ${tall ? '1080×1350' : '1080×1080'}`)}
-          ${SHOW_BADGES ? `<span class="tile-badge">${pad(i)} · ${ratio}</span>` : ''}
-        </div>`;
+        <button type="button" class="tile tile--tall" data-carousel="${c.slug}" data-slides="${c.slides}" data-caption="${esc(`${c.category} · ${c.title}`)}" aria-label="Open carousel: ${esc(c.title)}, ${c.slides} slides">
+          <img src="/posts/${c.slug}/cover.webp" alt="" width="640" height="800" loading="lazy" decoding="async">
+          ${SHOW_BADGES ? `<span class="tile-badge">${esc(c.category)}</span>` : ''}
+          <span class="tile-count" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="3.5" width="9" height="11" rx="1.5"/><path d="M5.5 1.5h7a2 2 0 0 1 2 2v9"/></svg>${c.slides}</span>
+        </button>`;
 };
+
+// Full-screen carousel viewer for the feed (main.js fills it in when a tile is clicked).
+const lightbox = () => `
+<dialog class="lightbox" data-lightbox aria-label="Carousel">
+  <div class="lb-stage">
+    <button type="button" class="lb-nav lb-prev" data-lb-prev aria-label="Previous slide">←</button>
+    <div class="lb-frame"><div class="lb-track" data-lb-track></div></div>
+    <button type="button" class="lb-nav lb-next" data-lb-next aria-label="Next slide">→</button>
+  </div>
+  <div class="lb-bar">
+    <span class="lb-caption" data-lb-caption></span>
+    <span class="lb-dots" data-lb-dots></span>
+    <button type="button" class="lb-close" data-lb-close aria-label="Close">Close <span aria-hidden="true">×</span></button>
+  </div>
+</dialog>`;
 
 const feed = () => `
 <section class="section rule feed" id="work">
   <div class="wrap">
-    ${sectionHead('02 / The feed', 'Posts we’ve shipped.', 'Different verticals, same discipline: research first, write lean, ship on schedule. The method transfers directly to regulated financial content.', 360)}
+    ${sectionHead('02 / The feed', 'Carousels built to clear compliance.', 'Concept work for fictional brokers: company news, industry news and promotions. A different brand every time, the same discipline underneath. Tap any post to flip through it.', 380)}
   </div>
   ${map(posts.rows, (row, r) => `
   <div class="feed-row" data-row data-dir="${r % 2 ? -1 : 1}">
@@ -140,9 +157,10 @@ const feed = () => `
       <button type="button" class="arrow" data-nav="-1" aria-label="Scroll row ${r + 1} back">←</button>
       <button type="button" class="arrow" data-nav="1" aria-label="Scroll row ${r + 1} forward">→</button>
     </div>
-    <div class="track" data-track tabindex="0" aria-label="Post examples, row ${r + 1}">${map(row, tile)}
+    <div class="track" data-track tabindex="0" aria-label="Sample carousels, row ${r + 1}">${map(row, tile)}
     </div>
   </div>`)}
+  ${lightbox()}
 </section>`;
 
 const process = () => `

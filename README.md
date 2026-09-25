@@ -15,7 +15,7 @@ npm run preview  # serve dist/ locally
 - `src/render.js`: every page (home, contact, blog, articles, calendar, privacy, 404) rendered to static HTML at build time
 - `src/layout.js`: shared chrome: session bar, header with theme toggle, footer, cookie banner, contact form
 - `src/blog/*.md`: blog articles (frontmatter + markdown), loaded by `src/blog.js`
-- `src/posts.json`: gallery rows for "The feed". Put exports (1080×1350 or 1080×1080) in `public/posts/` and set `src`. No client names or handles.
+- `src/posts.json`: portfolio carousels for "The feed" and their row order. Slides live in `public/posts/<slug>/1.webp`..`N.webp` (1080×1350) plus a 640×800 `cover.webp`; clicking a tile opens them in the viewer. Concept work for fictional brokers, so no real client names, handles or logos.
 - `src/main.js` + `src/js/`: browser behaviour (theme, consent, session clock, calendar, contact form, motion)
 - `src/styles.css`: light theme on `:root`, dark on `[data-theme='dark']`, then components and responsive rules
 - `worker/`: the Cloudflare Worker. `/api/contact` emails briefs; `/api/calendar` serves the Forex Factory weekly feed, cached. `npm run dev` runs the same handlers locally (emails are printed, not sent).
@@ -45,4 +45,4 @@ After that, every push to `main` deploys to production. Pushes to other branches
 
 ## Before launch
 
-Stand-ins from the design handoff are still in place: some hotlinked imagery (`ASSET_BASE` in `src/content.js`: icons, world map, testimonial portraits), testimonial quotes and names, pricing figures, and empty gallery tiles. The privacy page has not had legal review.
+Stand-ins from the design handoff are still in place: some hotlinked imagery (`ASSET_BASE` in `src/content.js`: icons, world map, testimonial portraits), testimonial quotes and names, and pricing figures. The privacy page has not had legal review.

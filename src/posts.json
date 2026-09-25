@@ -1,129 +1,24 @@
 {
-  "//": "Gallery rows for \"The feed\". Put post exports in public/posts/ and set src to e.g. \"/posts/01.jpg\". Tile size comes from width/height (4:5 or 1:1). Never include client names or handles.",
+  "//": "Portfolio carousels for \"The feed\". Slides live in public/posts/<slug>/1.webp..N.webp with a 640x800 cover.webp. Concept work for fictional brokers: never include real client names, handles or logos.",
+  "carousels": [
+    { "slug": "company-news", "category": "Company news", "title": "cTrader is now live", "slides": 3 },
+    { "slug": "cn-new-office", "category": "Company news", "title": "We're opening in Dubai", "slides": 3 },
+    { "slug": "cn-app-update", "category": "Company news", "title": "Our app, rebuilt", "slides": 3 },
+    { "slug": "cn-milestone", "category": "Company news", "title": "100,000 traders. Thank you.", "slides": 3 },
+    { "slug": "cn-holiday-hours", "category": "Company news", "title": "Holiday trading hours", "slides": 3 },
+    { "slug": "industry-news", "category": "Industry news", "title": "Finfluencers face stricter rules", "slides": 3 },
+    { "slug": "in-central-banks", "category": "Industry news", "title": "Central bank week", "slides": 3 },
+    { "slug": "in-gold-drivers", "category": "Industry news", "title": "Why gold keeps making headlines", "slides": 3 },
+    { "slug": "in-clock-change", "category": "Industry news", "title": "The clocks are changing", "slides": 3 },
+    { "slug": "in-cpi-explainer", "category": "Industry news", "title": "CPI in 60 seconds", "slides": 3 },
+    { "slug": "promotion", "category": "Promotion", "title": "0 commission on gold", "slides": 3 },
+    { "slug": "pr-refer-friend", "category": "Promotion", "title": "Trade together: refer a friend", "slides": 3 },
+    { "slug": "pr-demo-challenge", "category": "Promotion", "title": "The Demo Challenge", "slides": 3 },
+    { "slug": "pr-index-spreads", "category": "Promotion", "title": "Tighter spreads on US indices", "slides": 3 },
+    { "slug": "pr-swap-free", "category": "Promotion", "title": "Swap-free accounts", "slides": 3 }
+  ],
   "rows": [
-    [
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1350,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1080,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1350,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1350,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1080,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1350,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1080,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1350,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1350,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1080,
-        "alt": ""
-      }
-    ],
-    [
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1080,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1350,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1350,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1080,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1350,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1080,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1350,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1350,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1080,
-        "alt": ""
-      },
-      {
-        "src": null,
-        "width": 1080,
-        "height": 1350,
-        "alt": ""
-      }
-    ]
+    ["promotion", "industry-news", "company-news", "pr-demo-challenge", "in-gold-drivers", "cn-app-update", "pr-swap-free", "in-cpi-explainer"],
+    ["cn-milestone", "pr-refer-friend", "in-central-banks", "cn-new-office", "pr-index-spreads", "in-clock-change", "cn-holiday-hours"]
   ]
 }

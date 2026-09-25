@@ -52,10 +52,10 @@ export const heroMeta = [
   { k: 'Fluent in', v: 'MT4 · MT5 · cTrader' },
 ];
 
-// Hero floating post cards. Set `src` to a real post export to replace the placeholder.
+// Hero floating post cards (sample carousels from src/posts.json).
 export const heroPosts = {
-  tall: { src: null, alt: '', caption: 'Carousel · 1/7', meta: '09:00 LDN' },
-  square: { src: null, alt: '', caption: 'Reel cover', meta: 'TH · EN' },
+  tall: { src: '/posts/promotion/cover.webp', alt: 'Sample promotion carousel cover: 0 commission on gold', caption: 'Promotion · 1/3', meta: '09:00 LDN' },
+  square: { src: '/img/hero-post-square.webp', alt: 'Sample industry news post: central bank week', caption: 'Industry news', meta: 'EN · AR' },
 };
 
 export const services = [
